@@ -1,6 +1,8 @@
 $very-dark-grey: #20212c;
 $dark-grey: #2b2c37;
-$light-violet: #635fc7;
+$main-violet: #635fc7;
+$medium-grey: #828fa3;
+
 * {
   padding: 0;
   margin: 0;
@@ -52,7 +54,7 @@ $light-violet: #635fc7;
       align-items: center;
 
       .add-task__button {
-        background-color: $light-violet;
+        background-color: $main-violet;
         padding: 0.4rem 1.2rem;
         border-radius: 25px;
         opacity: 25%;
@@ -68,7 +70,40 @@ $light-violet: #635fc7;
     background-color: $dark-grey;
   }
   .main__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     grid-area: main__container;
     background-color: $very-dark-grey;
+    .main__items {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      .main__par {
+        color: $medium-grey;
+        font-size: 1.1em;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-align: center;
+      }
+      .main__btn {
+        background-color: $main-violet;
+        color: #fff;
+        font-size: 1em;
+        letter-spacing: 1px;
+        border: 0;
+        padding: 0.8em 1em;
+        margin-top: 2em;
+        border-radius: 25px;
+        text-align: center;
+        svg {
+          margin-right: 6px;
+        }
+      }
+    }
   }
 }
